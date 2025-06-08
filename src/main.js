@@ -1,5 +1,12 @@
 const app = document.getElementById("app");
 
+// 添加 Umami 分析脚本
+const umamiScript = document.createElement('script');
+umamiScript.defer = true;
+umamiScript.src = 'https://cloud.umami.is/script.js';
+umamiScript.setAttribute('data-website-id', 'fda868f7-c034-4a00-a49c-6c36659da05e');
+document.head.appendChild(umamiScript);
+
 app.innerHTML = `
   <h1 class="page-title">币安Alpha项目列表</h1>
   <button id="testNotification" class="test-btn">测试通知</button>
